@@ -9,16 +9,6 @@ object ReportsProducer extends App {
   val topic = "DroneReports"
   var key = true
 
-  // Properties for Kafka producer
-  val props: Properties = new Properties()
-  props.put("bootstrap.servers", "localhost:9092")
-  props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-  props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-  props.put("acks", "all")
-
-  // Instantiate producer
-  val producer = new KafkaProducer[String, String](props)
-
   // Main report generator loop
   def ReportGeneratorLoop(producer: KafkaProducer[String, String]) {
     while (key) {
@@ -29,9 +19,21 @@ object ReportsProducer extends App {
     }
   }
 
+  // Graceful shutdown
   def StopLoop(): Unit = {
     key = false
   }
 
+  // Properties for Kafka producer
+  val props: Properties = new Properties()
+  props.put("bootstrap.servers", "localhost:9092")
+  props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+  props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
+  props.put("acks", "all")
+
+  // Instantiate producer
+  val producer = new KafkaProducer[String, String](props)
+
+  // Main execution loop
   ReportGeneratorLoop(producer);
 }
