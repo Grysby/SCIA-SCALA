@@ -1,0 +1,11 @@
+# IDE thrash
+.idea/
+.bsp/
+project/
+target/
+
+# Random files
+*.zip
+*.pdf
+*.swap
+*.log
