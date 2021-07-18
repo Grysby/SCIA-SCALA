@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="sbt: org.iban4j:iban4j:3.2.2-RELEASE:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/org/iban4j/iban4j/3.2.2-RELEASE/iban4j-3.2.2-RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/org/iban4j/iban4j/3.2.2-RELEASE/iban4j-3.2.2-RELEASE-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/org/iban4j/iban4j/3.2.2-RELEASE/iban4j-3.2.2-RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

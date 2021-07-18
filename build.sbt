@@ -9,7 +9,8 @@ libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 libraryDependencies += "net.liftweb" %% "lift-json" % "3.4.3+"
 libraryDependencies += "org.apache.kafka" % "kafka-clients" % "2.7.0"
 libraryDependencies += "org.apache.kafka" %% "kafka" % "2.7.0"
-libraryDependencies += "com.github.pjfanning" %% "scala-faker" % "0.5.3"
+
+libraryDependencies += "com.github.azakordonets" %% "fabricator" % "2.1.9"
 
 libraryDependencies ++= Seq(
   "io.circe" %% "circe-core",

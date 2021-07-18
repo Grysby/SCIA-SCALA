@@ -1,8 +1,8 @@
 import java.text.SimpleDateFormat
 import java.util.{Calendar, Date}
-import faker._
 import io.circe.syntax._
 import io.circe.{Decoder, Encoder}
+import fabricator._
 
 object DroneReportObj {
 
@@ -26,12 +26,18 @@ object DroneReportObj {
 
   def GenerateReport(max_citizens: Int, max_words: Int): DroneReport = {
     val random = scala.util.Random
+    val location = Location()
+    val contact = Contact()
+    val words = Words()
+
+    val n_citizens = random.nextInt(max_citizens)
+
     DroneReport(
       random.nextInt(1000),
       Calendar.getInstance().getTime,
-      Position(Address.latitude, Address.longitude),
-      List.fill(random.nextInt(max_citizens))((Name.name, random.nextInt(100))).toMap,
-      Lorem.words(random.nextInt(max_words))
+      Position(location.latitude, location.longitude),
+      List.fill(n_citizens)((contact.fullName(setPrefix = false, setSuffix = false), random.nextInt(100))).toMap,
+      List.fill(n_citizens)(words.sentence(random.nextInt(max_words)))
     )
   }
 
