@@ -1,9 +1,14 @@
 import DroneReportObj._
+import faker._
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
+
 import java.util.Properties
 
 
 object ReportsProducer extends App {
+
+  val testAddr = Address.latitude
+  println(testAddr)
 
   // Name of the topic that will be used to put messages
   val topic = "DroneReports"

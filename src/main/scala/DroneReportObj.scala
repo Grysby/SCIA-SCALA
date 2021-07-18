@@ -1,6 +1,6 @@
 import java.text.SimpleDateFormat
 import java.util.{Calendar, Date}
-import faker.{Address, Lorem, Name}
+import faker._
 import io.circe.syntax._
 import io.circe.{Decoder, Encoder}
 
