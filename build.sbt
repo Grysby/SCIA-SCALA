@@ -14,7 +14,3 @@ libraryDependencies ++= Seq(
   "io.circe" %% "circe-generic",
   "io.circe" %% "circe-parser"
 ).map(_ % "0.14.1")
-
-//addCompilerPlugin(
-//  "org.scalamacros" % "paradise" % "2.1.1" cross CrossVersion.full
-//)

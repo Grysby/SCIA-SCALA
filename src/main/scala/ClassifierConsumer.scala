@@ -4,7 +4,6 @@ import java.util
 import java.util.{Calendar, Properties}
 import java.text.SimpleDateFormat
 import scala.concurrent.duration.DurationInt
-import io.circe.generic.auto._
 import io.circe.parser._
 import io.circe.syntax._
 import DroneReportObj._
@@ -33,7 +32,7 @@ object ClassifierConsumer extends App {
         }
 
         problemCitizens
-          .map(citizen => (citizen._1, citizen._2, pos))
+          .map(citizen => (citizen._1, citizen._2, pos.asInstanceOf[Position]))
           .map(entry => new ProducerRecord[String, String](writingTopic, entry.asJson.noSpaces))
           .foreach(records => producer.send(records))
       }
