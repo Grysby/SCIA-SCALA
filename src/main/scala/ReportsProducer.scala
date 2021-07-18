@@ -13,7 +13,7 @@ object ReportsProducer extends App {
   def ReportGeneratorLoop(producer: KafkaProducer[String, String]) {
     while (key) {
       val report = GenerateReport(10, 10)
-      val record = new ProducerRecord[String, String](topic, report.BuildReport())
+      val record = new ProducerRecord[String, String](topic, BuildReport(report))
       producer.send(record)
       Thread.sleep(3000L)
     }
