@@ -28,7 +28,7 @@ On an other terminal execute:
 
 Now that everything is set up, you can open your favorite IDE (we recommend using Intellij) and execute the ***ReportProducer*** first and then the ***ClassifierConsumer***.
 
-## Storing to your private Google Platforme Cloud
+## Storing to your private Google Cloud Platform
 
 In order to connect our solution to your own google platform you will first need confluent-hub, then you will need to download the plugin gcs-connector by running
 ***sudo confluent-hub install confluentinc/kafka-connect-gcs:latest***
